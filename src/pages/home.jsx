@@ -67,7 +67,7 @@ export default function Home() {
         }
       };
 
-      const intervalId = setInterval(scroll, 16);
+      const intervalId = setInterval(scroll, 8);
 
       return () => clearInterval(intervalId);
     };
