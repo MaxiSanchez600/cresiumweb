@@ -14,9 +14,9 @@ export default function SolutionCard({
 
   return (
     <div
-      className={`rounded-[30px] py-4 px-3 transition duration-200 cursor-default ease-out  ${
+      className={`min-h-50 rounded-[30px] py-4 px-3 transition duration-200 cursor-default ease-out  ${
         bgacive ? "sm:bg-[#f6dccf] sm:shadow-lg" : "sm:bg-inherit"
-      } bg-[#FFFFFF5E]`}
+      } bg-[#FFFFFF5E] flex flex-col h-80 items-center justify-center`}
     >
       {imgpositon === "top" && <img src={src} className="w-16 mx-auto py-4" />}
       <h2

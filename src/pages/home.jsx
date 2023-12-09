@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Fragment } from "react";
+import { Fragment, useRef, useEffect } from "react";
 import hero_img from "../assets/images/hero_img.png";
 import s from "../assets/images/s.png";
 import novaz from "../assets/images/novaz.png";
@@ -25,6 +25,7 @@ import testimonial_1 from "../assets/images/testimonial_1.png";
 import testimonial_2 from "../assets/images/testimonial_2.png";
 import { useTranslation } from "react-i18next";
 import hero_img_mobile from "../assets/images/mobile_top.png";
+import avatar from "../assets/images/smallLogo.png";
 import {
   Header,
   Footer,
@@ -36,12 +37,60 @@ import {
   TestimonialCard,
 } from "../components";
 import Emailnewsletter from "../components/email-newsletter";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+
 export default function Home() {
   const { t } = useTranslation();
 
+  const scrollContainer1Ref = useRef(null);
+  const scrollContainer2Ref = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer1 = scrollContainer1Ref.current;
+    const scrollContainer2 = scrollContainer2Ref.current;
+
+    const scrollSpeed1 = 1;
+    const scrollSpeed2 = 1;
+
+    const handleScroll = (scrollContainer, scrollSpeed) => {
+      const maxScrollLeft =
+        scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+      const scroll = () => {
+        scrollContainer.scrollLeft += scrollSpeed;
+
+        if (
+          scrollContainer.scrollLeft >= maxScrollLeft ||
+          scrollContainer.scrollLeft <= 0
+        ) {
+          scrollSpeed *= -1;
+        }
+      };
+
+      const intervalId = setInterval(scroll, 16);
+
+      return () => clearInterval(intervalId);
+    };
+
+    const cleanup1 = handleScroll(scrollContainer1, scrollSpeed1);
+    const cleanup2 = handleScroll(scrollContainer2, scrollSpeed2);
+
+    return () => {
+      cleanup1();
+      cleanup2();
+    };
+  }, []);
   return (
     <Fragment>
       <Header />
+      <FloatingWhatsApp
+        phoneNumber="+5491125542014"
+        accountName="Cresium"
+        chatMessage="Listos para potenciar tus finanzas!"
+        statusMessage="Suele responder al instante"
+        placeholder="Escribi tu mensaje..."
+        avatar={avatar}
+      />
       <main>
         {/* Hero */}
         <img src={hero_img_mobile} alt="" className="sm:hidden block" />
@@ -52,7 +101,7 @@ export default function Home() {
           <div className="sm:col-span-6 pb-10 col-span-12 sm:order-1 order-2">
             <h2
               dangerouslySetInnerHTML={{ __html: t("hero.title") }}
-              className="lg:text-5xl text-2xl animate_fadeInUp  py-7 font-bold"
+              className="lg:text-5xl text-3xl animate_fadeInUp  lg:py-7 py-3 font-bold"
             ></h2>
             <div className="sm:block hidden">
               <Text
@@ -71,7 +120,7 @@ export default function Home() {
               />
             </div>
 
-            <form className="w-full mt-7">
+            <form className="w-full lg:mt-7 mt-3">
               <div className="grid sm:gap-3 gap-1 grid-cols-12">
                 <div className="lg:col-span-7 rounded-[13.27px] sm:col-span-12 col-span-6">
                   <Input />
@@ -117,9 +166,12 @@ export default function Home() {
         {/* Solutions */}
         <div id="solutions">
           <div className="bg-gradient-to-r from-[#fad7bb] to-[#f8cdbb] ">
-            <div className="xl:overflow-hidden overflow-x-scroll">
+            <div
+              ref={scrollContainer1Ref}
+              className="xl:overflow-hidden overflow-x-auto"
+            >
               <div className="min-w-[1100px]">
-                <div className="grid grid-cols-3 lg:gap-10  gap-10 lg:py-28 py-10 2xl:w-[60%]  sm:w-[90%] w-[98%] mx-auto">
+                <div className="grid grid-cols-3 lg:gap-10 gap-10 lg:py-28 py-10 2xl:w-[60%]  sm:w-[90%] w-[98%] mx-auto">
                   <SolutionCard
                     imgpositon="top"
                     title={t("soltions.solution_1.title")}
@@ -156,9 +208,12 @@ export default function Home() {
               <h4 className="sm:text-4xl text-2xl py-4 font-NeueHaasDisplayThin font-[500] text-center">
                 {t("soltions.subtitle")}
               </h4>
-              <div className="xl:overflow-hidden overflow-x-scroll">
-                <div className="sm:min-w-[1000px]  min-w-[1800px]">
-                  <div className="grid lg:gap-12 md:gap-2 gap-8  sm:py-10 pt-10 sm:grid-cols-3 grid-cols-5 ">
+              <div
+                ref={scrollContainer2Ref}
+                className="xl:overflow-hidden overflow-x-auto"
+              >
+                <div className="sm:min-w-[1000px] min-w-[1800px]">
+                  <div className="grid lg:gap-12 md:gap-2 gap-8 sm:grid-cols-3 grid-cols-5 py-5">
                     <SolutionCard
                       imgpositon="middle"
                       title={t("soltions.solution_4.title")}
@@ -221,7 +276,7 @@ export default function Home() {
                     shadow={false}
                     src={TextBubble}
                     bgacive={true}
-                    width={"85%"}
+                    width={"70%"}
                     description={t("soltions.solution_7.description")}
                   />
                 </div>
