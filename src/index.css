@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: NeueHaasDisplayBlack;
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBlack.ttf");
+}
+
+@font-face {
+  font-family: NeueHaasDisplayBold;
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf");
+}
+
+@font-face {
+  font-family: NeueHaasDisplayLight;
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf");
+}
+
+@font-face {
+  font-family: NeueHaasDisplayRoman;
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf");
+}
+
+@font-face {
+  font-family: NeueHaasDisplayMedium;
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf");
+}
+@font-face {
+  font-family: NeueHaasDisplayThin;
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayThin.ttf");
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url("../src/assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+body {
+  font-family: NeueHaasDisplayRoman;
+}
+.animate_fadeInUp {
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+.Dropdown-control {
+  border-radius: 10px 10px 0px 0px !important;
+  color: #ed781f !important;
+}
+.Dropdown-menu {
+  border-radius: 0px 0px 10px 10px !important;
+}
