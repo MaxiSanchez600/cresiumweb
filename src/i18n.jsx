@@ -153,7 +153,7 @@ i18n
           },
           hero: {
             title:
-              "Finanzas <span style='color:#ef7c21'>simplificadas Crecimiento</span> maximizado Todo en un solo lugar",
+              "Finanzas <span style='color:#ef7c21'>simplificadas\n Crecimiento</span> maximizado\n Todo en un solo lugar",
             description:
               "Comenzá a gestionar las finanzas de tu empresa como nunca las gestionaste antes.",
           },
