@@ -156,11 +156,12 @@ i18n
             title2: "<span style='color:#ef7c21'>Crecimiento</span> maximizado",
             title3: "Todo en un solo lugar",
             description:
-              "Comenzá a gestionar las finanzas de tu empresa como nunca las gestionaste antes.",
+              "Comenzá a gestionar las finanzas de tu empresa como nunca lo hiciste antes.",
           },
           newsletter: {
             input: "Email",
             button: "Empezá ahora - sin costo",
+            button2: "Empezá ahora",
           },
           brand: {
             title: "Empresas que confían en nosotros",
@@ -209,7 +210,7 @@ i18n
             solution_8: {
               title: "Todo en un <span style='color:#ef7c21'>solo lugar</span>",
               description:
-                "Administrá todas tus necesidades financieras en una sola plataforma.",
+                "Administrá todas tus finanzas en una sola plataforma.",
             },
           },
           cta: {
@@ -244,18 +245,18 @@ i18n
             },
           },
           testimonios: {
-            title: "Testimonios",
+            title: "Feedback",
             subtitle:
               "Escuchamos constantemente a nuestros clientes. CRESIUM nace a partir de tus necesidades.",
             testimonials_1: {
               description:
-                "“Con Cresium centralizamos todo nuestro plata y sabemos exactamente cuanta tenemos. Esto nos ahorra mucho tiempo.",
+                "“Con Cresium centralizamos todo nuestro plata y sabemos exactamente cuanta tenemos. Esto nos ahorra mucho tiempo.“",
               name: "Karen Krebs - COO",
               position: "RYA Indumentaria",
             },
             testimonials_2: {
               description:
-                "““Antes de usar Cresium perdíamos plata todos los días y no lo sabíamos. Cresium resguarda el valor de nuestro dinero desde que entra hasta que sale.”",
+                "“Antes de usar Cresium perdíamos plata todos los días y no lo sabíamos. Cresium resguarda el valor de nuestro dinero desde que entra hasta que sale.”",
               name: "Sebastian Rimmele - CEO ",
               position: "Dignos",
             },

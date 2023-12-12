@@ -43,19 +43,20 @@ function Social() {
 }
 
 export default function Footer() {
-  const {t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <footer className="2xl:w-[60%] w-[90%] sm:py-20 py-4 mx-auto bg-white">
       <div className="grid gap-y-8  lg:grid-cols-4 sm:grid-cols-3 grid-cols-1">
         <div className="mt-12">
           <p className="text-[#77808B]  sm:w-[60%] font-NeueHaasDisplayThin">
-            {t('sitemap.about')}
-            
+            {t("sitemap.about")}
           </p>
         </div>
         <div>
-          <h4 className="text-[#EF7C21] font-bold sm:mb-4 ">{t('sitemap.getintouch')}</h4>
+          <h4 className="text-[#EF7C21] font-NeueHaasDisplayBold sm:mb-4 ">
+            {t("sitemap.getintouch")}
+          </h4>
           <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
             <Infoitem
               title="Buenos Aires, Argentina"
@@ -78,8 +79,8 @@ export default function Footer() {
           <Social />
         </div>
         <div>
-          <h4 className="text-[#EF7C21] font-bold sm:mb-4 ">
-            {t('sitemap.news')}
+          <h4 className="text-[#EF7C21] font-NeueHaasDisplayBold sm:mb-4 ">
+            {t("sitemap.news")}
           </h4>
           <Newsletter />
         </div>

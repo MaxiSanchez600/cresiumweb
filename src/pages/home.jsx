@@ -36,50 +36,12 @@ import {
   Title,
   TestimonialCard,
 } from "../components";
-import Emailnewsletter from "../components/email-newsletter";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import Emailnewsletter from "../components/email-newsletter";
 
 export default function Home() {
   const { t } = useTranslation();
 
-  const scrollContainer1Ref = useRef(null);
-  const scrollContainer2Ref = useRef(null);
-
-  useEffect(() => {
-    const scrollContainer1 = scrollContainer1Ref.current;
-    const scrollContainer2 = scrollContainer2Ref.current;
-
-    const scrollSpeed1 = 1;
-    const scrollSpeed2 = 1;
-
-    const handleScroll = (scrollContainer, scrollSpeed) => {
-      const maxScrollLeft =
-        scrollContainer.scrollWidth - scrollContainer.clientWidth;
-
-      const scroll = () => {
-        scrollContainer.scrollLeft += scrollSpeed;
-
-        if (
-          scrollContainer.scrollLeft >= maxScrollLeft ||
-          scrollContainer.scrollLeft <= 0
-        ) {
-          scrollSpeed *= -1;
-        }
-      };
-
-      const intervalId = setInterval(scroll, 8);
-
-      return () => clearInterval(intervalId);
-    };
-
-    const cleanup1 = handleScroll(scrollContainer1, scrollSpeed1);
-    const cleanup2 = handleScroll(scrollContainer2, scrollSpeed2);
-
-    return () => {
-      cleanup1();
-      cleanup2();
-    };
-  }, []);
   return (
     <Fragment>
       <Header />
@@ -99,7 +61,7 @@ export default function Home() {
           className="grid sm:pb-32 pb-6 2xl:w-[60%]  w-[90%] mx-auto items-end	 grid-cols-12 gap-2"
         >
           <div className="sm:col-span-6 pb-10 col-span-12 sm:order-1 order-2">
-            <div className="lg:py-7 py-3">
+            <div className="lg:py-7 py-7">
               <h3
                 dangerouslySetInnerHTML={{ __html: t("hero.title1") }}
                 className="lg:text-5xl text-3xl animate_fadeInUp font-NeueHaasDisplayBold"
@@ -125,21 +87,12 @@ export default function Home() {
               <Text
                 width={"100%"}
                 align="left"
-                size="sm"
+                size="base"
                 text={t("hero.description")}
               />
             </div>
 
-            <form className="w-full lg:mt-7 mt-3">
-              <div className="grid sm:gap-3 gap-1 grid-cols-12">
-                <div className="lg:col-span-7 rounded-[13.27px] sm:col-span-12 col-span-6">
-                  <Input />
-                </div>
-                <div className="lg:col-span-5 sm:col-span-12 col-span-6">
-                  <Button title={t("newsletter.button")} />
-                </div>
-              </div>
-            </form>
+            <Emailnewsletter title="newsletter.button" />
           </div>
           <div className="sm:col-span-6 sm:block hidden col-span-12 sm:order-2 order-1">
             <img
@@ -175,37 +128,36 @@ export default function Home() {
         </div>
         {/* Solutions */}
         <div id="solutions">
-          <div className="bg-gradient-to-r from-[#fad7bb] to-[#f8cdbb] ">
-            <div
-              ref={scrollContainer1Ref}
-              className="xl:overflow-hidden overflow-x-auto"
-            >
-              <div className="min-w-[1100px]">
-                <div className="grid grid-cols-3 lg:gap-10 gap-10 lg:py-28 py-10 2xl:w-[60%]  sm:w-[90%] w-[98%] mx-auto">
-                  <SolutionCard
-                    imgpositon="top"
-                    title={t("soltions.solution_1.title")}
-                    src={doller}
-                    bgacive={false}
-                    description={t("soltions.solution_1.description")}
-                    width="70%"
-                  />
-                  <SolutionCard
-                    imgpositon="top"
-                    title={t("soltions.solution_2.title")}
-                    src={fund}
-                    bgacive={true}
-                    description={t("soltions.solution_2.description")}
-                    width="70%"
-                  />
-                  <SolutionCard
-                    imgpositon="top"
-                    title={t("soltions.solution_3.title")}
-                    src={cash}
-                    bgacive={false}
-                    description={t("soltions.solution_3.description")}
-                    width="70%"
-                  />
+          <div className="bg-gradient-to-r from-[#fad7bb] to-[#f8cdbb]">
+            <div className="lg:gap-10 gap-5 pb-20 2xl:w-[60%] w-[90%] mx-auto">
+              <div className="xl:overflow-hidden overflow-x-auto">
+                <div className="min-w-[1100px]">
+                  <div className="grid lg:gap-12 md:gap-2 gap-8 grid-cols-3 lg:py-20 py-10">
+                    <SolutionCard
+                      imgpositon="top"
+                      title={t("soltions.solution_1.title")}
+                      src={doller}
+                      bgacive={false}
+                      description={t("soltions.solution_1.description")}
+                      width="70%"
+                    />
+                    <SolutionCard
+                      imgpositon="top"
+                      title={t("soltions.solution_2.title")}
+                      src={fund}
+                      bgacive={true}
+                      description={t("soltions.solution_2.description")}
+                      width="70%"
+                    />
+                    <SolutionCard
+                      imgpositon="top"
+                      title={t("soltions.solution_3.title")}
+                      src={cash}
+                      bgacive={false}
+                      description={t("soltions.solution_3.description")}
+                      width="70%"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -218,10 +170,7 @@ export default function Home() {
               <h4 className="sm:text-4xl text-2xl py-4 font-NeueHaasDisplayThin font-[500] text-center">
                 {t("soltions.subtitle")}
               </h4>
-              <div
-                ref={scrollContainer2Ref}
-                className="xl:overflow-hidden overflow-x-auto"
-              >
+              <div className="xl:overflow-hidden overflow-x-auto">
                 <div className="sm:min-w-[1000px] min-w-[1800px]">
                   <div className="grid lg:gap-12 md:gap-2 gap-8 sm:grid-cols-3 grid-cols-5 py-5">
                     <SolutionCard
@@ -375,7 +324,7 @@ export default function Home() {
         {/* testimonials */}
         <div className="bg-gradient-to-b from-[#fad7bb] to-[#fdf1e7] lg:py-24 sm:py-10 pt-10  ">
           <div className=" 2xl:w-[60%] sm:w-[80%] w-[90%] mx-auto">
-            <h2 className="text-[#1B1C20] text-4xl  animate_fadeInUp sm:w-[90%] mx-auto font-NeueHaasDisplayBold font-bold text-center">
+            <h2 className="text-[#1B1C20] text-4xl  animate_fadeInUp sm:w-[90%] mx-auto font-NeueHaasDisplayBold text-center">
               {t("testimonios.title")}
             </h2>
             <Text align="center" text={t("testimonios.subtitle")} />
@@ -418,7 +367,7 @@ export default function Home() {
               />
             </div>
             <div className="sm:w-[40%] py-10 mx-auto">
-              <Emailnewsletter />
+              <Emailnewsletter title="newsletter.button" />
             </div>
           </div>
         </div>

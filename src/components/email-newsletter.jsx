@@ -1,19 +1,39 @@
 import Input from "./input";
 import Button from "./button";
-export default function Emailnewsletter() {
-  const style1 = {
-    width: "60%",
+import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
+
+// eslint-disable-next-line react/prop-types
+export default function Emailnewsletter({ title }) {
+  const { t } = useTranslation();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    return emailjs
+      .send(
+        "service_e79195l",
+        "template_09i1zpb",
+        {
+          email: e.target[0].value,
+        },
+        "AIEdkPKy-nCP8gqKw"
+      )
+      .then(
+        () => {
+          window.location.reload();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
-    <form className="w-full mt-5">
-      <div className="flex items-center justify-around">
-        <div className="" style={style1}>
-          <Input />
-        </div>
-        <div className="">
-          <Button title="Empezá ahora - sin costo" />
-        </div>
+    <form className="w-full lg:mt-7 mt-7" onSubmit={sendEmail}>
+      <div className="flex items-center justify-between">
+        <Input style={{ width: "60%" }} />
+        <Button title={t(title)} style={{ width: "38%", height: "100%" }} />
       </div>
     </form>
   );

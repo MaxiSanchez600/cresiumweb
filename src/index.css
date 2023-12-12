@@ -72,3 +72,19 @@ body {
 .Dropdown-menu {
   border-radius: 0px 0px 10px 10px !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f6dccf;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ef7c21;
+  border-radius: 15px;
+}
