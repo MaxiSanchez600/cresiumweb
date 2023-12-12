@@ -4,35 +4,55 @@
 
 @font-face {
   font-family: NeueHaasDisplayBlack;
-  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBlack.ttf");
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBlack.ttf")
+      format("eot"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NeueHaasDisplayBold;
-  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf");
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf")
+      format("eot"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NeueHaasDisplayLight;
-  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf");
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf")
+      format("eot"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NeueHaasDisplayRoman;
-  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf");
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf")
+      format("eot"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.ttf") format("truetype");
 }
 
 @font-face {
   font-family: NeueHaasDisplayMedium;
-  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf");
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf")
+      format("eot"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.ttf") format("truetype");
 }
 @font-face {
   font-family: NeueHaasDisplayThin;
-  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayThin.ttf");
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayThin.ttf")
+      format("eot"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.ttf") format("truetype");
 }
 @font-face {
   font-family: RobotoRegular;
-  src: url("../src/assets/fonts/Roboto/Roboto-Regular.ttf");
+  src: url("../src/assets/fonts/Roboto/Roboto-Regular.ttf") format("eot"),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.ttf") format("truetype");
 }
 
 body {
