@@ -170,7 +170,7 @@ export default function Home() {
               <h4 className="sm:text-4xl text-2xl py-4 font-NeueHaasDisplayThin font-[500] text-center">
                 {t("soltions.subtitle")}
               </h4>
-              <div className="xl:overflow-hidden overflow-x-scroll">
+              <div className="scroll-container">
                 <div className="sm:min-w-[1000px] min-w-[1800px]">
                   <div className="grid lg:gap-12 md:gap-2 gap-8 sm:grid-cols-3 grid-cols-5 py-5">
                     <SolutionCard

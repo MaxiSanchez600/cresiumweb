@@ -88,3 +88,14 @@ body {
   background: #ef7c21;
   border-radius: 15px;
 }
+
+.scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Propiedad específica de iOS para un desplazamiento suave */
+  scrollbar-width: thin; /* Para navegadores Firefox */
+  scrollbar-color: #a0aec0 #4a5568; /* Cambia los colores según tus preferencias */
+
+  /* Estilos específicos de Webkit para iOS */
+  scrollbar-face-color: #4a5568;
+  scrollbar-track-color: #a0aec0;
+}
