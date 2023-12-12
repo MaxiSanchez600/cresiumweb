@@ -100,17 +100,17 @@ export default function Home() {
         >
           <div className="sm:col-span-6 pb-10 col-span-12 sm:order-1 order-2">
             <div className="lg:py-7 py-3">
-              <h2
+              <h3
                 dangerouslySetInnerHTML={{ __html: t("hero.title1") }}
-                className="lg:text-5xl text-3xl animate_fadeInUp"
-              ></h2>
+                className="lg:text-5xl text-3xl animate_fadeInUp font-NeueHaasDisplayBold"
+              ></h3>
               <h2
                 dangerouslySetInnerHTML={{ __html: t("hero.title2") }}
-                className="lg:text-5xl text-3xl animate_fadeInUp"
+                className="lg:text-5xl text-3xl animate_fadeInUp font-NeueHaasDisplayBold"
               ></h2>
               <h2
                 dangerouslySetInnerHTML={{ __html: t("hero.title3") }}
-                className="lg:text-5xl text-3xl animate_fadeInUp"
+                className="lg:text-5xl text-3xl animate_fadeInUp font-NeueHaasDisplayBold"
               ></h2>
             </div>
             <div className="sm:block hidden">
