@@ -130,7 +130,7 @@ export default function Home() {
         <div id="solutions">
           <div className="bg-gradient-to-r from-[#fad7bb] to-[#f8cdbb]">
             <div className="lg:gap-10 gap-5 pb-20 2xl:w-[60%] w-[90%] mx-auto">
-              <div className="xl:overflow-hidden overflow-x-auto">
+              <div className="xl:overflow-hidden overflow-x-scroll">
                 <div className="min-w-[1100px]">
                   <div className="grid lg:gap-12 md:gap-2 gap-8 grid-cols-3 lg:py-20 py-10">
                     <SolutionCard
@@ -170,7 +170,7 @@ export default function Home() {
               <h4 className="sm:text-4xl text-2xl py-4 font-NeueHaasDisplayThin font-[500] text-center">
                 {t("soltions.subtitle")}
               </h4>
-              <div className="xl:overflow-hidden overflow-x-auto">
+              <div className="xl:overflow-hidden overflow-x-scroll">
                 <div className="sm:min-w-[1000px] min-w-[1800px]">
                   <div className="grid lg:gap-12 md:gap-2 gap-8 sm:grid-cols-3 grid-cols-5 py-5">
                     <SolutionCard
