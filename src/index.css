@@ -31,11 +31,12 @@
 
 @font-face {
   font-family: NeueHaasDisplayRoman;
-  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf")
-      format("eot"),
-    url("GraublauWeb.woff") format("woff"),
-    url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRoman.ttf")
-      format("truetype");
+  src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/neuehaasdisplayroman-webfont.woff2")
+      format("woff2"),
+    url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/neuehaasdisplayroman-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
