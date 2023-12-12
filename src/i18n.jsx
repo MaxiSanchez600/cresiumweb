@@ -152,8 +152,9 @@ i18n
             start_now: "Empezá ahora",
           },
           hero: {
-            title:
-              "Finanzas <span style='color:#ef7c21'>simplificadas\n Crecimiento</span> maximizado\n Todo en un solo lugar",
+            title1: "Finanzas <span style='color:#ef7c21'>simplificadas",
+            title2: "<span style='color:#ef7c21'>Crecimiento</span> maximizado",
+            title3: "Todo en un solo lugar",
             description:
               "Comenzá a gestionar las finanzas de tu empresa como nunca las gestionaste antes.",
           },

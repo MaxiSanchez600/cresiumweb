@@ -99,10 +99,20 @@ export default function Home() {
           className="grid sm:pb-32 pb-6 2xl:w-[60%]  w-[90%] mx-auto items-end	 grid-cols-12 gap-2"
         >
           <div className="sm:col-span-6 pb-10 col-span-12 sm:order-1 order-2">
-            <h2
-              dangerouslySetInnerHTML={{ __html: t("hero.title") }}
-              className="lg:text-5xl text-3xl animate_fadeInUp  lg:py-7 py-3 font-bold"
-            ></h2>
+            <div className="lg:py-7 py-3">
+              <h2
+                dangerouslySetInnerHTML={{ __html: t("hero.title1") }}
+                className="lg:text-5xl text-3xl animate_fadeInUp font-bold"
+              ></h2>
+              <h2
+                dangerouslySetInnerHTML={{ __html: t("hero.title2") }}
+                className="lg:text-5xl text-3xl animate_fadeInUp font-bold"
+              ></h2>
+              <h2
+                dangerouslySetInnerHTML={{ __html: t("hero.title3") }}
+                className="lg:text-5xl text-3xl animate_fadeInUp  font-bold"
+              ></h2>
+            </div>
             <div className="sm:block hidden">
               <Text
                 width={"80%"}
