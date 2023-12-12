@@ -6,7 +6,6 @@
   font-family: NeueHaasDisplayBlack;
   src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBlack.ttf")
       format("eot"),
-    url("GraublauWeb.woff") format("woff"),
     url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBlack.ttf")
       format("truetype");
 }
@@ -15,7 +14,6 @@
   font-family: NeueHaasDisplayBold;
   src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf")
       format("eot"),
-    url("GraublauWeb.woff") format("woff"),
     url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBold.ttf")
       format("truetype");
 }
@@ -24,7 +22,6 @@
   font-family: NeueHaasDisplayLight;
   src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf")
       format("eot"),
-    url("GraublauWeb.woff") format("woff"),
     url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf")
       format("truetype");
 }
@@ -36,14 +33,13 @@
     url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/neuehaasdisplayroman-webfont.woff")
       format("woff");
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: NeueHaasDisplayMedium;
   src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf")
       format("eot"),
-    url("GraublauWeb.woff") format("woff"),
     url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf")
       format("truetype");
 }
@@ -51,14 +47,12 @@
   font-family: NeueHaasDisplayThin;
   src: url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayThin.ttf")
       format("eot"),
-    url("GraublauWeb.woff") format("woff"),
     url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayThin.ttf")
       format("truetype");
 }
 @font-face {
   font-family: RobotoRegular;
   src: url("../src/assets/fonts/Roboto/Roboto-Regular.ttf") format("eot"),
-    url("GraublauWeb.woff") format("woff"),
     url("../src/assets/fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayRegular.ttf")
       format("truetype");
 }
