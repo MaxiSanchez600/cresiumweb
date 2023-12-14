@@ -214,6 +214,7 @@ export default function Home() {
                       src={growth}
                       bgacive={true}
                       width={"70%"}
+                      imgWidth="20"
                       description={t("soltions.solution_4.description")}
                     />
                     <SolutionCard
@@ -223,6 +224,7 @@ export default function Home() {
                       src={manage}
                       bgacive={true}
                       width={"70%"}
+                      imgWidth="20"
                       description={t("soltions.solution_5.description")}
                     />
                     <SolutionCard
@@ -231,6 +233,7 @@ export default function Home() {
                       src={card}
                       bgacive={true}
                       width={"70%"}
+                      imgWidth="20"
                       title={t("soltions.solution_6.title")}
                       description={t("soltions.solution_6.description")}
                     />
@@ -241,7 +244,7 @@ export default function Home() {
                         shadow={false}
                         src={TextBubble}
                         bgacive={true}
-                        width={"85%"}
+                        width={"70%"}
                         description={t("soltions.solution_7.description")}
                       />
                     </div>
@@ -252,6 +255,7 @@ export default function Home() {
                         shadow={false}
                         bgacive={true}
                         width={"70%"}
+                        imgWidth="20"
                         src={payement}
                         description={t("soltions.solution_8.description")}
                       />
@@ -270,6 +274,7 @@ export default function Home() {
                     src={TextBubble}
                     bgacive={true}
                     width={"70%"}
+                    imgWidth="20"
                     description={t("soltions.solution_7.description")}
                   />
                 </div>
@@ -280,6 +285,7 @@ export default function Home() {
                     shadow={false}
                     bgacive={true}
                     width={"70%"}
+                    imgWidth="20"
                     src={payement}
                     description={t("soltions.solution_8.description")}
                   />
@@ -298,7 +304,7 @@ export default function Home() {
             <div className="bg-gradient-to-r from-[#fad7bb] to-[#f8cdbb] rounded-[30px] lg:p-10 p-5 sm:pb-auto pb-24">
               <h2
                 dangerouslySetInnerHTML={{ __html: t("cta.title") }}
-                className="text-[#1B1C20] lg:text-4xl text-xl animate_fadeInUp sm:w-[90%] font-NeueHaasDisplayThin text-left py-5"
+                className="text-[#1B1C20] lg:text-4xl text-xl animate_fadeInUp sm:w-[90%] font-NeueHaasDisplayRoman text-left py-5"
               />
 
               <button className="bg-gradient-to-r xl:text-lg sm:text-sm text-[14px] hover:from-[#c5430f] hover:to-[#c5430f] hover:shadow-md hover:scale-105  transition duration-200 ease-out hover:ease-in  from-[#EE7C1F] to-[#E8581F] rounded-[13.27px] sm:px-6 px-4 sm:py-2 py-[0.9rem] text-white font-NeueHaasDisplayBold">
@@ -311,7 +317,7 @@ export default function Home() {
         <div className=" xl:w-[50%] sm:w-[80%] gap-4 w-[90%] mx-auto">
           <h4
             dangerouslySetInnerHTML={{ __html: t("whynecessery.title") }}
-            className="sm:text-5xl text-4xl py-2 font-NeueHaasDisplayThin text-center"
+            className="sm:text-5xl text-4xl py-2 font-NeueHaasDisplayRoman text-center"
           >
             {/* <span className="font-NeueHaasDisplayBold">necesario</span> */}
           </h4>
@@ -323,7 +329,7 @@ export default function Home() {
                 src={lackoftime}
                 imgpositon="top"
                 description={t("whynecessery.feature_1.description")}
-                width="60%"
+                width="70%"
               />
             </div>
             <div>
@@ -332,7 +338,7 @@ export default function Home() {
                 src={financialeducation}
                 imgpositon="top"
                 description={t("whynecessery.feature_2.description")}
-                width="60%"
+                width="70%"
               />
             </div>
             <div>
@@ -341,7 +347,7 @@ export default function Home() {
                 src={wrench}
                 imgpositon="top"
                 description={t("whynecessery.feature_3.description")}
-                width="60%"
+                width="70%"
               />
             </div>
             <div>
@@ -350,7 +356,7 @@ export default function Home() {
                 src={eyes}
                 imgpositon="top"
                 description={t("whynecessery.feature_4.description")}
-                width="60%"
+                width="70%"
               />
             </div>
           </div>
@@ -378,10 +384,10 @@ export default function Home() {
             </div>
           </div>
           <div className="sm:w-[80%] w-[90%] mx-auto py-10">
-            <h4 className="sm:text-[48px]   text-4xl py-2  text-center">
+            <h4 className="sm:text-[48px]   text-4xl py-3  text-center">
               {t("starttoday.title")}
             </h4>
-            <h4 className="sm:text-[34px]  text-2xl NeueHaasDisplayThin  text-center">
+            <h4 className="sm:text-[34px]  text-2xl py-2 NeueHaasDisplayThin  text-center">
               {t("starttoday.subtitle")}
             </h4>
             <div className="sm:block hidden">
@@ -401,7 +407,7 @@ export default function Home() {
               />
             </div>
             <div className="sm:w-[40%] py-10 mx-auto">
-              <Emailnewsletter title="newsletter.button" />
+              <Emailnewsletter title="newsletter.button2" />
             </div>
           </div>
         </div>

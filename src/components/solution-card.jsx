@@ -8,6 +8,7 @@ export default function SolutionCard({
   imgpositon,
   bgacive = false,
   width = "90%",
+  imgWidth = "16",
   onHover,
 }) {
   const style = {
@@ -31,7 +32,7 @@ export default function SolutionCard({
         style={style}
       ></h2>
       {imgpositon === "middle" && (
-        <img src={src} className="w-16 mx-auto py-4" />
+        <img src={src} className={`w-${imgWidth} mx-auto py-4`} />
       )}
       <Text text={description} align="center" width={width} mx={"auto"} />
     </div>

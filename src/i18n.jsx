@@ -25,7 +25,7 @@ i18n
               "Start managing your company's finances like you've never managed them before.",
           },
           newsletter: {
-            input: "Email",
+            input: "EEmail",
             button: "Get started now - free of charge",
           },
           brand: {
@@ -127,14 +127,14 @@ i18n
             title: "You can start today!",
             subtitle: "Simple, agile and free of charge.",
             description:
-              "Leave us your email and we will contact you as soon as possible.",
+              "Leave us your eEmail and we will contact you as soon as possible.",
           },
           sitemap: {
             about:
               "Cresium is a Fintech that drives the growth of SMEs in Latin America",
             getintouch: "Get In Touch!",
             news: "Do you want to receive news?",
-            already: "Already you mail!",
+            already: "Already you Email!",
           },
           misc: {
             "know-more": "Know more",
@@ -159,7 +159,7 @@ i18n
               "Comenzá a gestionar las finanzas de tu empresa como nunca lo hiciste antes.",
           },
           newsletter: {
-            input: "Email",
+            input: "EEmail",
             button: "Empezá ahora - sin costo",
             button2: "Empezá ahora",
           },
@@ -215,7 +215,7 @@ i18n
           },
           cta: {
             title:
-              "Ocúpate de tu negocio, nosotros nos ocupamos de tus <span style='font-weight: 900'>finanzas</span>",
+              "Ocúpate de tu negocio, nosotros nos ocupamos de tus finanzas",
             getstared: "Empezá ahora",
           },
           whynecessery: {
@@ -229,7 +229,7 @@ i18n
             feature_2: {
               title: "<span style='color:#ef7c21'>Educación</span> financiera",
               description:
-                "Concentrate en tu negocio que es lo que sabes hacer. Nosotros sabemos gestionar las finanzas.",
+                "Concentrate en tu negocio que es lo que sabés hacer. Nosotros sabemos gestionar las finanzas.",
             },
             feature_3: {
               title:
@@ -250,7 +250,7 @@ i18n
               "Escuchamos constantemente a nuestros clientes. CRESIUM nace a partir de tus necesidades.",
             testimonials_1: {
               description:
-                "“Con Cresium centralizamos todo nuestro plata y sabemos exactamente cuanta tenemos. Esto nos ahorra mucho tiempo.“",
+                "“Con Cresium centralizamos todo nuestro dinero en un solo lugar. Sabemos exactamente cuánto tenemos y proyectamos cuánto vamos a tener. Esto nos ahorra mucho tiempo.“",
               name: "Karen Krebs - COO",
               position: "RYA Indumentaria",
             },
@@ -265,14 +265,14 @@ i18n
             title: "Podés empezar hoy!",
             subtitle: "Simple, ágil y sin costo.",
             description:
-              "Déjanos tu mail y nos pondremos en contacto contigo lo antes posible.",
+              "Dejanos tu Email y nos pondremos en contacto contigo lo antes posible.",
           },
           sitemap: {
             about:
               "Cresium es una Fintech que impulsa el crecimiento de las PYMES en Latinoamérica",
             getintouch: "Ponete en contacto!",
             news: "Querés recibir noticias?",
-            already: "Deja tu mail!",
+            already: "Deja tu Email!",
           },
           misc: {
             "know-more": "Know more",
