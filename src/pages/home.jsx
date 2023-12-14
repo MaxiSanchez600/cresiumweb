@@ -40,6 +40,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Emailnewsletter from "../components/email-newsletter";
 import { useInView } from "react-intersection-observer";
 import "intersection-observer";
+import MainSolutionCard from "../components/main-solution-cards";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -190,32 +191,7 @@ export default function Home() {
             <div className="lg:gap-10 gap-5 pb-20 2xl:w-[60%] w-[90%] mx-auto">
               <div ref={scrollerRef1} className="scroll-container">
                 <div className="min-w-[1100px]">
-                  <div className="grid lg:gap-12 md:gap-2 gap-8 grid-cols-3 lg:py-20 py-10">
-                    <SolutionCard
-                      imgpositon="top"
-                      title={t("soltions.solution_1.title")}
-                      src={doller}
-                      bgacive={false}
-                      description={t("soltions.solution_1.description")}
-                      width="70%"
-                    />
-                    <SolutionCard
-                      imgpositon="top"
-                      title={t("soltions.solution_2.title")}
-                      src={fund}
-                      bgacive={true}
-                      description={t("soltions.solution_2.description")}
-                      width="70%"
-                    />
-                    <SolutionCard
-                      imgpositon="top"
-                      title={t("soltions.solution_3.title")}
-                      src={cash}
-                      bgacive={false}
-                      description={t("soltions.solution_3.description")}
-                      width="70%"
-                    />
-                  </div>
+                  <MainSolutionCard />
                 </div>
               </div>
             </div>

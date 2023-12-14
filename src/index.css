@@ -99,3 +99,35 @@ body {
   scrollbar-face-color: #4a5568;
   scrollbar-track-color: #a0aec0;
 }
+
+@layer utilities {
+  .ease-out-custom {
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    padding-bottom: 0rem;
+  }
+  to {
+    padding-bottom: 3rem; /* Ajusta la distancia que desees */
+  }
+}
+@keyframes slide-down {
+  from {
+    padding-bottom: 3rem;
+  }
+  to {
+    padding-bottom: 0rem; /* Ajusta la distancia que desees */
+  }
+}
+@layer utilities {
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slide-up 0.5s ease-out forwards;
+  }
+}

@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import Text from "./text";
 export default function SolutionCard({
+  id,
   title,
   description,
   src,
   imgpositon,
   bgacive = false,
   width = "90%",
+  onHover,
 }) {
   const style = {
     width: width,
@@ -14,8 +16,12 @@ export default function SolutionCard({
 
   return (
     <div
-      className={`min-h-50 rounded-[30px] py-4 px-3 transition duration-200 cursor-default ease-out  ${
-        bgacive ? "sm:bg-[#f6dccf] sm:shadow-lg" : "sm:bg-inherit"
+      onMouseOver={onHover}
+      id={id}
+      className={`min-h-50 rounded-[30px] px-3 transition duration-200 cursor-default duration-500 ease-out-custom  ${
+        bgacive
+          ? "sm:bg-[#f6dccf] sm:shadow-lg animate-slide-up"
+          : "sm:bg-inherit"
       } bg-[#FFFFFF5E] flex flex-col h-80 items-center justify-center`}
     >
       {imgpositon === "top" && <img src={src} className="w-16 mx-auto py-4" />}
