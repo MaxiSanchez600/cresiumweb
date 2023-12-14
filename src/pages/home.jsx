@@ -188,7 +188,7 @@ export default function Home() {
         {/* Solutions */}
         <div id="solutions">
           <div className="bg-gradient-to-r from-[#fad7bb] to-[#f8cdbb]">
-            <div className="lg:gap-10 gap-5 pb-20 2xl:w-[60%] w-[90%] mx-auto">
+            <div className="lg:gap-10 gap-5 pb-10 2xl:w-[60%] w-[90%] mx-auto">
               <div ref={scrollerRef1} className="scroll-container">
                 <div className="min-w-[1100px]">
                   <MainSolutionCard />
@@ -317,7 +317,7 @@ export default function Home() {
         <div className=" xl:w-[50%] sm:w-[80%] gap-4 w-[90%] mx-auto">
           <h4
             dangerouslySetInnerHTML={{ __html: t("whynecessery.title") }}
-            className="sm:text-5xl text-4xl py-2 font-NeueHaasDisplayRoman text-center"
+            className="sm:text-5xl text-4xl py-2 font-NeueHaasDisplayThin text-center"
           >
             {/* <span className="font-NeueHaasDisplayBold">necesario</span> */}
           </h4>
