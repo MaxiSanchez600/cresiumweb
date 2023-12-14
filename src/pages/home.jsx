@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Fragment, useRef, useEffect } from "react";
+import { Fragment, useRef, useEffect, useState } from "react";
 import hero_img from "../assets/images/hero_img.png";
 import s from "../assets/images/s.png";
 import novaz from "../assets/images/novaz.png";
@@ -38,9 +38,69 @@ import {
 } from "../components";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Emailnewsletter from "../components/email-newsletter";
+import { useInView } from "react-intersection-observer";
+import "intersection-observer";
 
 export default function Home() {
   const { t } = useTranslation();
+
+  const scrollerRef1 = useRef(null);
+  const scrollerRef2 = useRef(null);
+  const [animationCompleted, setAnimationCompleted] = useState(false);
+
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !animationCompleted) {
+          moveScrollersToCenter();
+          setAnimationCompleted(true);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5,
+    });
+    observer.observe(scrollerRef2.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [animationCompleted]);
+
+  const moveScrollersToCenter = () => {
+    const scroller1 = scrollerRef1.current;
+    const scroller2 = scrollerRef2.current;
+
+    if (scroller1 && scroller2) {
+      scrollToCenterSmoothly(scroller1, 2.9);
+      scrollToCenterSmoothly(scroller2, 5);
+    }
+  };
+
+  const scrollToCenterSmoothly = (container, width) => {
+    const targetPosition = container.scrollWidth / width;
+    const duration = 1000; // Ajusta la duración según sea necesario
+    const startTime = performance.now();
+    const initialScroll = container.scrollLeft;
+
+    const animateScroll = (timestamp) => {
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = easeInOutQuad(progress);
+
+      container.scrollLeft =
+        initialScroll + (targetPosition - initialScroll) * ease;
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
+  const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
 
   return (
     <Fragment>
@@ -130,7 +190,7 @@ export default function Home() {
         <div id="solutions">
           <div className="bg-gradient-to-r from-[#fad7bb] to-[#f8cdbb]">
             <div className="lg:gap-10 gap-5 pb-20 2xl:w-[60%] w-[90%] mx-auto">
-              <div className="xl:overflow-hidden overflow-x-scroll">
+              <div ref={scrollerRef1} className="scroll-container">
                 <div className="min-w-[1100px]">
                   <div className="grid lg:gap-12 md:gap-2 gap-8 grid-cols-3 lg:py-20 py-10">
                     <SolutionCard
@@ -170,7 +230,7 @@ export default function Home() {
               <h4 className="sm:text-4xl text-2xl py-4 font-NeueHaasDisplayThin font-[500] text-center">
                 {t("soltions.subtitle")}
               </h4>
-              <div className="scroll-container">
+              <div ref={scrollerRef2} className="scroll-container">
                 <div className="sm:min-w-[1000px] min-w-[1800px]">
                   <div className="grid lg:gap-12 md:gap-2 gap-8 sm:grid-cols-3 grid-cols-5 py-5">
                     <SolutionCard
