@@ -58,9 +58,7 @@ export default function Home() {
       });
     };
 
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
-    });
+    const observer = new IntersectionObserver(handleIntersection);
     observer.observe(scrollerRef2.current);
 
     return () => {
