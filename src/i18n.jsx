@@ -25,7 +25,7 @@ i18n
               "Start managing your company's finances like you've never managed them before.",
           },
           newsletter: {
-            input: "EEmail",
+            input: "Email",
             button: "Get started now - free of charge",
           },
           brand: {
@@ -127,7 +127,7 @@ i18n
             title: "You can start today!",
             subtitle: "Simple, agile and free of charge.",
             description:
-              "Leave us your eEmail and we will contact you as soon as possible.",
+              "Leave us your Email and we will contact you as soon as possible.",
           },
           sitemap: {
             about:
@@ -159,7 +159,7 @@ i18n
               "Comenzá a gestionar las finanzas de tu empresa como nunca lo hiciste antes.",
           },
           newsletter: {
-            input: "EEmail",
+            input: "Email",
             button: "Empezá ahora - sin costo",
             button2: "Empezá ahora",
           },
