@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop Header */}
-      <header className="hidden  sm:grid items-center py-5 grid-cols-3 2xl:w-[60%] w-[90%] mx-auto">
+      <header className="  sm:grid items-center py-5 grid-cols-3 2xl:w-[60%] w-[90%] mx-auto">
         <div>
           <Logo />
         </div>
